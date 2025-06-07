@@ -87,7 +87,7 @@ async function loadPage() {
       warnExternalLinks(contentDiv);
     } else {
       document.title = `Ой! Что-то пошло не так.`;
-      contentDiv.innerHTML = "<h2>Страница не найдена</h2>";
+      contentDiv.innerHTML = "<h2>Страница не найдена</h2><p>Страница, которую вы ищете, не существует, либо была удалена";
     }
 
     setupSearch(pages);
@@ -97,7 +97,7 @@ async function loadPage() {
       link.setAttribute("href", "/error_favicon.png?v=" + Date.now());
     }
     document.title = `Ой! Что-то пошло не так.`;
-    document.getElementById("content").innerHTML = `<p>Ошибка загрузки данных (${error})</p>`;
+    document.getElementById("content").innerHTML = `<h2>Ошибка загрузки данных</h2><p>(${error})</p>`;
   }
 }
 
