@@ -90,18 +90,6 @@ async function loadPage() {
       contentDiv.innerHTML = "<h2>Страница не найдена</h2><p>Страница, которую вы ищете, не существует, либо была удалена";
     }
 
-    const mainNav = document.createElement("nav");
-    mainNav.id = "main-nav";
-
-    data.pages.filter(p => p.main).forEach(p => {
-        const link = document.createElement("a");
-        link.href = `?pageid=${p.id}`;
-        link.textContent = p.title;
-        mainNav.appendChild(link);
-    });
-
-document.querySelector("header").insertBefore(mainNav, document.getElementById("search"));
-
     setupSearch(pages);
   } catch (error) {
     const link = document.querySelector('link[rel="icon"]');
