@@ -1,0 +1,211 @@
+.container {
+  display: flex;
+}
+
+#toc {
+  width: 12em;
+  background: #333;
+  padding: 1em;
+  overflow-y: auto;
+  position: relative;
+}
+
+#toc::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #555;
+}
+
+main {
+  padding: 2em;
+  flex-grow: 1;
+  background: #999999;
+}
+
+.info, .warning {
+  border-left: 4px solid;
+  color: #000;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.info {
+  border-color: rgba(33, 150, 243, 192);
+  background: linear-gradient(90deg, rgba(227, 242, 253, 128) 0%, rgba(227, 242, 253, 0) 100%);
+}
+
+.info::before {
+  display: block;
+  font-size: 1.25em;
+  content: "Примечание:";
+  font-weight: bold;
+}
+
+.warning {
+  border-color: rgba(244, 67, 54, 192);
+  background: linear-gradient(90deg, rgba(255, 235, 238, 128) 0%, rgba(255, 235, 238, 0) 100%);
+}
+
+.warning::before {
+  display: block;
+  font-size: 1.25em;
+  content: "Предупреждение:";
+  font-weight: bold;
+}
+
+pre, code {
+  background-color: #000;
+  border: 1px solid #111;
+  font-family: monospace;
+  padding: 0.5em;
+  color: #fff;
+  overflow-x: auto;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.content {
+  background-color: #f4f4f4;
+}
+
+a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: #888;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background: #2a2a2a;
+  color: #ddd;
+  font-size: 12px;
+}
+
+header, footer {
+  background: repeating-linear-gradient(
+    45deg,
+    #111 0px,
+    #111 5px,
+    #222 5px,
+    #222 10px
+  );
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header {
+  border-bottom: 1px solid #555;
+}
+
+header::after {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(5, 5, 5, 255) 100%)
+}
+
+footer {
+  border-top: 1px solid #555;
+}
+
+footer::after {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 50%, rgba(5, 5, 5, 255) 100%)
+}
+
+.container {
+  display: flex;
+  height: calc(100% - 120px); /* header + footer height */
+}
+
+#content {
+  flex: 1;
+  padding: 2em;
+  overflow-y: auto;
+  background: #2a2a2a;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  z-index: 11;
+}
+
+#search-input {
+  padding: 0.4em;
+  font-size: 14px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+}
+
+#search-results {
+  position: absolute;
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  margin-top: 3.2em;
+  width: 12.9em;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+a {
+  color: #89bdff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#logo {
+  z-index: 11;
+  background-image: url("https://zzzzaycevich.neocities.org/flux.png");
+  background-size: cover;
+  width: 64px;
+  height: 32px;
+}
+
+#content img {
+  display: block;
+  margin: 1em 0;
+  max-width: 100%;
+  height: auto;
+  float: left;
+  margin-right: 1em;
+}
+
+#current-date::after {
+  content: " г., Flux Engine Development Team";
+}
+
+splitter {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Загрузка... - Энциклопедия Flux Engine для разработчиков</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div id="logo"></div>
+    <div id="search">
+      <input type="text" id="search-input" placeholder="Поиск по Энциклопедии..." />
+      <div id="search-results"></div>
+    </div>
+  </header>
+  <div class="container">
+    <aside id="toc">
+      <strong>Содержание</strong>
+      <ul id="toc-list"></ul>
+    </aside>
+    <main id="content">
+      <p>Загрузка...</p>
+    </main>
+  </div>
+  <footer>
+    <p>&copy; <span id="current-date"></span></p>
+  </footer>
+  <div id="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Наверх
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
