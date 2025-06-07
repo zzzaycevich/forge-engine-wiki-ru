@@ -79,7 +79,7 @@ async function loadPage() {
     if (page) {
       document.title = `${page.title} - Энциклопедия Flux Engine для разработчиков`;
       
-      contentDiv.innerHTML = `<h1>${page.title}</h1><p style="font-style: italic; font-size: 8">Материал из Энциклопедии Flux Engine</p><splitter></splitter>` + page.content;
+      contentDiv.innerHTML = `<h1>${page.title}</h1><p style="font-style: italic; font-size: 8;color: #aaa">Материал из Энциклопедии Flux Engine</p><splitter></splitter>` + page.content;
 
       const headings = contentDiv.querySelectorAll("h2, h3");
       generateTOC(Array.from(headings));
