@@ -166,11 +166,26 @@ footer::after {
   background: #333;
   color: #fff;
   border: 1px solid #555;
-  margin-top: 3.2em;
-  width: 12.9em;
+  margin-top: 0.5em;
   max-height: 200px;
   overflow-y: auto;
   z-index: 100;
+  width: 100%;
+  min-width: 200px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+#search-results a {
+  display: block;
+  padding: 0.5em;
+  border-bottom: 1px solid #444;
+  color: #89bdff;
+}
+
+#search-results a:hover {
+  background: #444;
+  text-decoration: underline;
 }
 
 a {
