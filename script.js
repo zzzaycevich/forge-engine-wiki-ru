@@ -115,3 +115,12 @@ document.addEventListener("scroll", () => {
     btn.style.display = "none";
   }
 });
+
+document.addEventListener('copy', function(e) {
+    let selectedText = window.getSelection().toString();
+    
+    if (selectedText.length > 0) {
+        e.clipboardData.setData('text/plain', selectedText + '\n\n[© Взято с сайта Энциклопедии Flux Engine (zzzaycevich.github.io/flux-wiki-ru)]');
+        e.preventDefault();
+    }
+});
