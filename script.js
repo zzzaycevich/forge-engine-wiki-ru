@@ -103,6 +103,10 @@ async function loadPage() {
 
 window.addEventListener("DOMContentLoaded", loadPage);
 
+if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)) {
+  location.href = "about:blank";
+}
+
 document.addEventListener("scroll", () => {
   const btn = document.getElementById("scroll-top");
   if (window.scrollY > 300) {
