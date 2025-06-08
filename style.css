@@ -74,7 +74,7 @@ pre, code {
 }
 
 a[target="_blank"]::after {
-  content: " ↗";
+  content: "↗ ";
   font-size: 0.8em;
   color: #888;
 }
