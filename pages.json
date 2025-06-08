@@ -2,6 +2,6 @@
   {
     "id": 1,
     "title": "Пример",
-    "content": "<p>Это - страница-пример.<p>"
+    "content": "<h2>Это - страница-пример.</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dapibus tellus sapien porttitor magna rutrum pretium curabitur congue nibh. Vehicula id lacus taciti eleifend sociosqu erat placerat feugiat venenatis.\n\nPulvinar orci ipsum condimentum litora tristique eros primis porta. Augue molestie diam ligula laoreet velit felis elementum elementum porta. Id ut torquent fermentum proin vestibulum faucibus nulla sociosqu cubilia. Lacinia suspendisse ex luctus tempor morbi erat lorem ipsum senectus sit aptent lacus accumsan pulvinar.\n\nUltricies vehicula feugiat urna mattis libero himenaeos laoreet.\n\nAnte gravida orci hendrerit magna pellentesque consectetur augue. Habitant mi velit dictumst curabitur morbi sem egestas torquent.\n\nNulla consequat aliquam nullam torquent tristique ullamcorper. Cursus volutpat fames maecenas tincidunt blandit iaculis pellentesque hac egestas arcu velit potenti et non.</p>"
   }
 ]
