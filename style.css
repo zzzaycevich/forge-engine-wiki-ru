@@ -229,3 +229,17 @@ splitter {
   height: 1px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)
 }
+
+.infotable {
+  background: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 6px;
+  margin: 1em 0;
+  padding: 0.5em;
+  border-spacing: 0.5em;
+}
+
+.infotable td {
+  vertical-align: middle;
+  color: #ddd;
+}
