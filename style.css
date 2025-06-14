@@ -200,7 +200,7 @@ a:hover {
 }
 
 #current-date::after {
-  content: " г., Flux Engine Development Team";
+  content: " г., отдел студии Scissors Game Studio по разработке Forge Engine";
 }
 
 splitter {
