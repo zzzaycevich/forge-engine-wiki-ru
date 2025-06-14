@@ -77,25 +77,31 @@ async function loadPage() {
     const contentDiv = document.getElementById("content");
 
     if (page) {
-      document.title = `${page.title} - Энциклопедия Flux Engine для разработчиков`;
+      document.title = `${page.title} - Энциклопедия Forge Engine для разработчиков`;
       
-      contentDiv.innerHTML = `<h1>${page.title}</h1><p style="font-style: italic; font-size: 8;color: #aaa">Материал из Энциклопедии Flux Engine</p><splitter></splitter>` + page.content;
+      contentDiv.innerHTML = `<h1>${page.title}</h1><p style="font-style: italic; font-size: 8;color: #aaa">Материал из Энциклопедии Forge Engine</p><splitter></splitter>` + page.content;
 
       const headings = contentDiv.querySelectorAll("h2, h3");
       generateTOC(Array.from(headings));
 
       warnExternalLinks(contentDiv);
     } else {
+      const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = 'error-favicon.png'; // Путь к вашей иконке ошибки
+      document.head.appendChild(link);
       document.title = `Ой! Что-то пошло не так.`;
       contentDiv.innerHTML = "<h2>Страница не найдена</h2><p>Страница, которую вы ищете, не существует, либо была удалена";
     }
 
     setupSearch(pages);
   } catch (error) {
-    const link = document.querySelector('link[rel="icon"]');
-    if (link) {
-      link.setAttribute("href", "/error_favicon.png?v=" + Date.now());
-    }
+    const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = 'error-favicon.png'; // Путь к вашей иконке ошибки
+    document.head.appendChild(link);
     document.title = `Ой! Что-то пошло не так.`;
     document.getElementById("content").innerHTML = `<h2>Ошибка загрузки данных</h2><p>(${error})</p>`;
   }
@@ -120,7 +126,7 @@ document.addEventListener('copy', function(e) {
     let selectedText = window.getSelection().toString();
     
     if (selectedText.length > 0) {
-        e.clipboardData.setData('text/plain', selectedText + '\n\n[© Взято с сайта Энциклопедии Flux Engine (zzzaycevich.github.io/flux-wiki-ru)]');
+        e.clipboardData.setData('text/plain', selectedText + '\n\n[© Взято с сайта Энциклопедии Forge Engine (zzzaycevich.github.io/forge-engine-wiki-ru)]');
         e.preventDefault();
     }
 });
