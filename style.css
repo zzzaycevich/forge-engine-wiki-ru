@@ -184,9 +184,9 @@ a:hover {
 
 #logo {
   z-index: 11;
-  background-image: url("logo-header.png");
+  background-image: url("logo.png");
   background-size: cover;
-  width: 128px;
+  width: 160px;
   height: 32px;
 }
 
